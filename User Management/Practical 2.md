@@ -30,15 +30,11 @@ You have just been hired as a junior system administrator at TechCorp, a company
    - Create groups: `devteam`
    - Add users to groups as needed:
      ```bash
-     sudo adduser alice
-     sudo adduser bob
      sudo adduser carol
      sudo adduser dave
      sudo adduser eve
      sudo adduser frank
      sudo addgroup devteam
-     sudo usermod -aG devteam alice
-     sudo usermod -aG devteam bob
      ```
 
 ### Lab Activities:
@@ -101,19 +97,20 @@ You have just been hired as a junior system administrator at TechCorp, a company
 2. **Modify File Permissions**
    - Task: Set the permissions of `/home/alice/project1` so that only the owner can write to it, but others in the group can read and execute.
 
-#### 5. Practice and Verification
-**Story:** To ensure all configurations are correct, practice creating additional users and groups and verify their settings.
+#### 5. Interactive and Innovative Practice
+**Story:** To ensure all configurations are correct and to understand the impact of user and group management, you will solve a series of practical tasks.
 
-1. **Create Multiple Users and Groups**
-   - Task: Create users: `user1`, `user2`, `user3`.
-   - Task: Create groups: `group1`, `group2`.
-   - Task: Add `user1` and `user2` to `group1`.
-   - Task: Add `user3` to `group2`.
-   - Task: Change ownership of a test file to `user1` and `group1`.
+1. **Scenario-Based Task**
+   - Task: You have a new project folder `/home/devteam/projectX` that needs to be accessible by all members of the `devteam` group, but only the project leader, Carol, should have write access. Configure the ownership and permissions accordingly.
+   - Hint: Use `chown` and `chmod` to set the appropriate ownership and permissions.
 
-2. **Verify Changes**
-   - Task: Check user and group information for each created user.
-   - Task: Verify file ownership and permissions.
+2. **Debugging Task**
+   - Task: Alice complains that she cannot access the shared project folder `/home/devteam/projectY` despite being in the `devteam` group. Investigate and resolve the issue.
+   - Hint: Check group memberships, folder ownership, and permissions.
+
+3. **Automation Task**
+   - Task: Write a shell script that automates the process of adding a new user, creating their home directory, setting a password, and adding them to a specific group. Test the script by creating a new user `newuser` and adding them to the `devteam` group.
+   - Hint: Use `adduser`, `passwd`, and `usermod` commands within your script.
 
 ### Summary and Cleanup
 1. **Summarize What You've Learned**
